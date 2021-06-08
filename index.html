@@ -33,12 +33,12 @@ $(document).ready(function(){
    dataType:"text",
    success:function(data)
    {
-    var project_data = data.split(/\r?\n|\r/);
+    var projects_data = data.split(/\r?\n|\r/);
     var table_data = '<table class="table table-bordered table-striped">';
     for(var count = 0; count<projects_data.length; count++)
     {
      var cell_data = projects_data[count].split(",");
-     project_data += '<tr>';
+     table_data += '<tr>';
      for(var cell_count=0; cell_count<cell_data.length; cell_count++)
      {
       if(count === 0)
